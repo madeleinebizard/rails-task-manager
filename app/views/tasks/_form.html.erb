@@ -1,0 +1,11 @@
+<%= form_for(@task) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <% unless @task.new_record?()%>
+  <%= f.label :completed %>
+  <%= f.text_field :completed %>
+  <% end %>
+  <%= f.label :details %>
+  <%= f.text_field :details %>
+  <%= f.submit %>
+<% end %>
